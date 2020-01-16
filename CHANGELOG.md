@@ -1,6 +1,6 @@
 # Changelog
 
-## 18.0.1 (upcoming)
+## 18.0.1 (January 16, 2020)
 
 **Fixed bugs:**
 

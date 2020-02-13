@@ -1,5 +1,12 @@
 # Changelog
 
+## 18.0.2 (upcoming)
+
+**Fixed bugs:**
+
+* st-dropdown-menu: Fix wrong visualization of select dropdown
+
+
 ## 18.0.1 (January 16, 2020)
 
 **Fixed bugs:**

@@ -1,6 +1,6 @@
 # Changelog
 
-## 20.0.0 (upcoming)
+## 20.0.0 (March 24, 2020)
 
 **New features:**
 

@@ -1,6 +1,6 @@
 # Changelog
 
-## 20.0.1 (upcoming)
+## 20.0.1 (March 26, 2020)
 
 **Fixed bugs:**
 

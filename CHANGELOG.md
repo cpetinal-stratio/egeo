@@ -1,6 +1,6 @@
 # Changelog
 
-## 21.0.0 (upcoming)
+## 21.0.0 (June 01, 2020)
 
 **New features:**
 

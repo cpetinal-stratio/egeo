@@ -1,25 +1,20 @@
-@Library('libpipelines@master') _
+@Library('libpipelines@feature/flow-1367-EGEO') _
 
 hose {
-    EMAIL = 'front'
-    MODULE = 'egeo'
+    EMAIL = 'cd'
+    MODULE = 'egeo-test'
     DEVTIMEOUT = 30
     RELEASETIMEOUT = 30
-    REPOSITORY = 'github.com/egeo'
+    REPOSITORY = 'github.com/cpetinal-stratio/egeo'
     LANG = 'typescript'
     FOSS = true
+    
+    sh ("mvn install")
 
     DEV = { config ->
 
-        doCompile(config)
-        doUT(config)
-        doPackage(config)
+        doPublishStatics(config, "target/html", "egeo/prueba")
 
-        parallel(QC: {
-            doStaticAnalysis(config)
-            doCoverallsAnalysis(config)
-        }, DEPLOY: {
-            doDeploy(config)
-        }, failFast: config.FAILFAST)
     }
 }
+

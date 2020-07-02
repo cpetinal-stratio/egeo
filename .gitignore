@@ -14,7 +14,7 @@ compiled/
 ## Project
 #################
 temp
-dist
+#dist
 projects/egeo-demo/src/assets/source-code
 
 #################

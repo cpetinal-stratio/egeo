@@ -8,10 +8,11 @@ hose {
     REPOSITORY = 'github.com/cpetinal-stratio/egeo'
     LANG = 'typescript'
     FOSS = true
+    DOWNLOADS_USER = "egeodownload"
 
     DEV = { config ->
 
-        doPublishStatics(config, "dist/egeo-demo", "egeo/test",null,false)
+        doPublishStatics(config, "dist/egeo-demo", "egeo/test",null,true)
 
     }
 }

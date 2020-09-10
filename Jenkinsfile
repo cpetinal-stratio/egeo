@@ -1,4 +1,4 @@
-@Library('libpipelines@feature/flow-1367-EGEO') _
+@Library('libpipelines@feature/FLOW-1511') _
 
 hose {
     EMAIL = 'cpetinal'
@@ -8,11 +8,12 @@ hose {
     REPOSITORY = 'github.com/cpetinal-stratio/egeo'
     LANG = 'typescript'
     FOSS = true
-    DOWNLOADS_USER = "egeodownload"
+    DOWNLOADS_USER = "download"
+    DEBUG = true
 
     DEV = { config ->
 
-        doPublishStatics(config, "dist/egeo-demo", "egeo/test",true)
+        doPublishStatics(config, "dist/egeo-demo", "downloads/test",true,true)
 
     }
 }

@@ -1,13 +1,14 @@
-@Library('libpipelines@master') _
+@Library('libpipelines@feature/flow-1367-EGEO') _
 
 hose {
-    EMAIL = 'front'
-    MODULE = 'egeo'
+    EMAIL = 'cpetinal'
+    MODULE = 'egeo-test'
     DEVTIMEOUT = 30
     RELEASETIMEOUT = 30
-    REPOSITORY = 'github.com/egeo'
+    REPOSITORY = 'github.com/cpetinal-stratio/egeo'
     LANG = 'typescript'
     FOSS = true
+
 
     DEV = { config ->
 
@@ -21,5 +22,7 @@ hose {
         }, DEPLOY: {
             doDeploy(config)
         }, failFast: config.FAILFAST)
+
     }
 }
+

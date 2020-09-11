@@ -13,7 +13,7 @@ hose {
 
     DEV = { config ->
 
-        doPublishStatics(config, "dist/egeo-demo", "downloads/test",true,true)
+        doPublishStatics(config, "dist/egeo-demo", "downloads/test",false,true)
 
     }
 }

@@ -1,25 +1,20 @@
-@Library('libpipelines@master') _
+@Library('libpipelines@feature/FLOW-1511') _
 
 hose {
-    EMAIL = 'front'
-    MODULE = 'egeo'
+    EMAIL = 'cpetinal'
+    MODULE = 'egeo-test'
     DEVTIMEOUT = 30
     RELEASETIMEOUT = 30
-    REPOSITORY = 'github.com/egeo'
+    REPOSITORY = 'github.com/cpetinal-stratio/egeo'
     LANG = 'typescript'
     FOSS = true
+    DOWNLOADS_USER = "download"
+    DEBUG = true
 
     DEV = { config ->
 
-        doCompile(config)
-        doUT(config)
-        doPackage(config)
+        doPublishStatics(config, "dist/egeo-demo", "downloads/test",false,true)
 
-        parallel(QC: {
-            doStaticAnalysis(config)
-            doCoverallsAnalysis(config)
-        }, DEPLOY: {
-            doDeploy(config)
-        }, failFast: config.FAILFAST)
     }
 }
+
